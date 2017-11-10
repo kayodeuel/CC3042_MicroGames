@@ -8,13 +8,20 @@ public class Jump : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        Debug.Log("Game started");
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            TriggerJump();
+            Debug.Log("Pressed left click.");
+        }
+            
+
+    }
 
     public void TriggerJump() {
 
