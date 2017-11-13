@@ -17,21 +17,20 @@ public class Jump : MonoBehaviour {
         if(Input.GetMouseButtonDown(0))
         {
             TriggerJump();
-            Debug.Log("Pressed left click.");
+            
         }
             
 
     }
+    // Triggers character's jump
+    void TriggerJump() {
 
-    public void TriggerJump() {
-
-        if (!jumped)
+        if (jumped == false)
         {
+            Debug.Log("Jumped.");
             GetComponent<Rigidbody2D>().AddForce(transform.up * 500);
             jumped = true;
         }
-        
-        
-    
+                
     }
 }

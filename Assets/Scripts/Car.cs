@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Car : MonoBehaviour {
+
+    
 
 	// Use this for initialization
 	void Start () {
-        
+        StartCar();
 		
 	}
 	
@@ -26,6 +29,9 @@ public class Car : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        print("Hey");
+        
+        Destroy(coll.gameObject);
     }
+
+
 }

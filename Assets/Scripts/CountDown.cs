@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountDown : MonoBehaviour {
 
     float timerValue = 5f;
     bool timerIsActive = false;
-    public Text guiText;
+    public Text timerText;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+        TriggerCountDown();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,8 +24,12 @@ public class CountDown : MonoBehaviour {
         {
             timerValue -= Time.deltaTime;
         }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         int intTimerValue = (int)timerValue;
-        guiText.text = intTimerValue.ToString();
+        timerText.text = intTimerValue.ToString();
 	}
 
     public void TriggerCountDown()
