@@ -24,7 +24,7 @@ public class CountDown : MonoBehaviour {
         {
             timerValue -= Time.deltaTime;
         }
-        else
+        else if (timerValue <= 0f)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

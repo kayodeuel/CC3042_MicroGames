@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class Car : MonoBehaviour {
 
-    
+    public float speed = -5.0f;
 
 	// Use this for initialization
 	void Start () {
         StartCar();
-		
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,7 +22,7 @@ public class Car : MonoBehaviour {
     public void StartCar()
     {
         Vector3 v = gameObject.GetComponent<Rigidbody2D>().velocity;
-        v.x = -5.0f;
+        v.x = speed;
         gameObject.GetComponent<Rigidbody2D>().velocity = v;
     }
 
