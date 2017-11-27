@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/CollectMicroGame.unity
+    guid: acbaa1a487d61344b8dfd0b238a70d8b
+  - enabled: 1
+    path: Assets/Scenes/CrossMicroGame.unity
+    guid: 1d351828623e51d46ac16091840af9b4
+  - enabled: 1
+    path: Assets/Scenes/JumpMicroGame.unity
+    guid: 3795ecf18bb0ef14392c1dac376c77d7
